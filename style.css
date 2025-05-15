@@ -139,7 +139,7 @@ main {
   font-family: "Overseer Regular";
   font-style: normal;
   font-weight: normal;
-  src: local("Overseer Regular"), url("/font/Overseer.woff") format("woff");
+  src: local("Overseer Regular"), url("font/Overseer.woff") format("woff");
 }
 
 @font-face {
@@ -147,7 +147,7 @@ main {
   font-style: normal;
   font-weight: normal;
   src: local("Overseer Regular"),
-    url("/font/Overseer Italic.woff") format("woff");
+    url("font/Overseer Italic.woff") format("woff");
 }
 
 /* inter-regular - latin */
@@ -156,7 +156,7 @@ main {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  src: url("../font/inter-v18-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("font/inter-v18-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* inter-700 - latin */
 @font-face {
@@ -164,7 +164,7 @@ main {
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  src: url("../font/inter-v18-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("font/inter-v18-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* ELEMENTI  */
