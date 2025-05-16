@@ -160,3 +160,77 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+// images.js
+const images = {
+  row1: [
+    "img/1.webp",
+    "img/2.webp",
+    "img/3.webp",
+    "img/4.webp",
+    "img/5.webp",
+    "img/6.webp",
+    "img/7.webp",
+    "img/8.webp",
+    // "img/9.webp",
+    "img/10.webp",
+    "img/11.webp",
+    "img/12.webp",
+    "img/13.webp",
+  ],
+  row2: [
+    "img/27.webp",
+    "img/15.webp",
+    "img/16.webp",
+    "img/17.webp",
+    "img/18.webp",
+    "img/19.webp",
+    "img/20.webp",
+    "img/21.webp",
+    "img/22.webp",
+    "img/23.webp",
+    "img/24.webp",
+    "img/25.webp",
+    "img/26.webp",
+  ],
+};
+
+const row1 = document.getElementById("carousel-row-1");
+const row2 = document.getElementById("carousel-row-2");
+
+// Duplichiamo le immagini per loop infinito
+const allImagesRow1 = [...images.row1, ...images.row1];
+const allImagesRow2 = [...images.row2, ...images.row2];
+
+allImagesRow1.forEach((src) => {
+  const img = document.createElement("img");
+  img.src = src;
+  row1.appendChild(img);
+});
+
+allImagesRow2.forEach((src) => {
+  const img = document.createElement("img");
+  img.src = src;
+  row2.appendChild(img);
+});
+
+const modal = document.getElementById("image-modal");
+const modalImg = document.getElementById("modal-img");
+const closeModal = document.getElementById("close-modal");
+
+document.querySelectorAll(".carousel-row img").forEach((img) => {
+  img.addEventListener("click", () => {
+    modalImg.src = img.src;
+    modal.classList.add("active");
+  });
+});
+
+closeModal.addEventListener("click", () => {
+  modal.classList.remove("active");
+});
+
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.classList.remove("active");
+  }
+});
