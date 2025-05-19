@@ -862,11 +862,11 @@ input[type="number"]::-webkit-outer-spin-button {
 #footer h6 {
   position: absolute;
   bottom: 5%;
-  left: 60%;
+  left: 50%;
   font-size: 1rem;
   color: var(--color-bg-light);
   z-index: 9;
-  transform: translate(-60%, 0%);
+  transform: translate(-50%, 0%);
 }
 
 #footer h6 a {
@@ -875,12 +875,12 @@ input[type="number"]::-webkit-outer-spin-button {
 
 #footer p {
   position: absolute;
-  bottom: 5%;
-  left: 35%;
+  bottom: 10%;
+  left: 50%;
   font-size: 1rem;
   color: var(--color-bg-light);
   z-index: 9;
-  transform: translate(-35%, 0%);
+  transform: translate(-50%, 0%);
 }
 
 #footer p:hover {
