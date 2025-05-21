@@ -21,7 +21,7 @@
 
 html,
 body {
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   scroll-behavior: smooth;
   height: 100%;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
@@ -123,6 +123,7 @@ p {
 /* Responsive collapse */
 @media (max-width: 768px) {
   .col-md-2,
+  .col-md-3,
   .col-md-4,
   .col-md-6,
   .col-md-8 {
@@ -165,7 +166,7 @@ main {
 h1 {
   font-size: 8rem;
   font-family: "Overseer Regular";
-  line-height: 9rem;
+  line-height: 8rem;
   margin-top: 8rem;
   margin-bottom: 3rem;
   margin-left: 5rem;
@@ -228,21 +229,6 @@ h3 {
   color: var(--color-giallo-cbc);
 }
 
-/* .nav-links a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background: #fecf4d;
-  bottom: -4px;
-  left: 0;
-  transition: 0.3s;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-} */
-
 /* HAMBURGER */
 .hamburger {
   display: none;
@@ -263,7 +249,7 @@ h3 {
   position: absolute;
   background: none;
   top: 1.2rem;
-  left: 15.5rem;
+  left: 2rem;
   border: none;
   font-size: 2.4rem;
   cursor: pointer;
@@ -300,7 +286,7 @@ h3 {
   }
 
   .nav-links.active {
-    transform: translateX(30%);
+    transform: translateX(65%);
   }
 
   .hamburger {
@@ -313,6 +299,12 @@ h3 {
 
   .close-btn {
     display: block;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: none;
   }
 }
 
@@ -742,10 +734,6 @@ h5 {
   animation: exitLeft 0.5s ease forwards;
 } */
 
-#iscrizione h3 {
-  text-align: right !important;
-}
-
 /* FORM  */
 
 .form-section {
@@ -808,7 +796,6 @@ input[type="number"]::-webkit-outer-spin-button {
 .cbc-form textarea:not(:placeholder-shown) + label {
   top: 0%;
   left: -33%;
-  /* font-size: 0.8rem; */
 }
 
 /* BUTTON STYLE */
@@ -838,17 +825,6 @@ input[type="number"]::-webkit-outer-spin-button {
   transform: scale(1);
 }
 
-/* MOBILE FRIENDLY */
-@media (max-width: 768px) {
-  .cbc-form {
-    gap: 1.5rem;
-  }
-
-  .form-section {
-    padding: 3rem 1rem;
-  }
-}
-
 /* FOOTER  */
 
 #footer {
@@ -857,7 +833,6 @@ input[type="number"]::-webkit-outer-spin-button {
   border-bottom: 3px solid var(--color-text-dark);
   background-color: var(--color-bg-dark);
 }
-
 
 #footer h6 {
   position: absolute;
@@ -1046,4 +1021,169 @@ select:-webkit-autofill {
   color: white;
   cursor: pointer;
   background: none;
+}
+
+/* MOBILE FRIENDLY */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 4.8rem;
+    line-height: 5rem;
+    margin-left: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+  }
+  .paragrafo {
+    position: relative;
+    height: auto;
+    width: 100%;
+    background-color: var(--color-giallo-cbc);
+    padding: 2rem;
+    border: 3px solid var(--color-text-dark);
+    box-shadow: 25px 25px 0px 0px var(--color-bottone-rosso);
+    transition: 200ms ease;
+  }
+  .paragrafo:hover,
+  .cards-menu:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  .duetre {
+    /* position: absolute; */
+    top: 0%;
+    left: 10%;
+  }
+  .cont-edizione.active .edizioni-img {
+    opacity: 0%;
+  }
+  .cont-edizione.active .duetre {
+    opacity: 100%;
+  }
+  .cont-edizione.active .descrizione {
+    max-height: 800px; /* o quanto ti serve */
+    opacity: 1;
+  }
+  .tab-buttons {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+  .tab-btn {
+    padding: 1.2rem 7rem;
+    width: 100%;
+  }
+  .tab-btn:nth-child(1) {
+    border-bottom: 1.5px solid var(--color-text-dark);
+    border-right: 3px solid var(--color-text-dark);
+  }
+  .tab-btn:nth-child(2) {
+    border-left: 3px solid var(--color-text-dark);
+    border-right: 3px solid var(--color-text-dark);
+    border-top: 1.5px solid var(--color-text-dark);
+    border-bottom: 1.5px solid var(--color-text-dark);
+  }
+  .tab-btn:nth-child(3) {
+    border-left: 3px solid var(--color-text-dark);
+    border-top: 1.5px solid var(--color-text-dark);
+  }
+  .cards-menu {
+    margin-top: 4rem;
+    display: block;
+    /* box-shadow: 20px 20px 0px 0px var(--color-bottone-rosso); */
+    transition: 200ms ease;
+  }
+  .menu-img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    transition: 200ms ease;
+    border: 3px solid var(--color-text-dark);
+    border-bottom: 1.5px solid var(--color-text-dark);
+  }
+  .card {
+    border-left: 3px solid var(--color-text-dark);
+    border-top: 1.5px solid var(--color-text-dark);
+  }
+  .menu-button {
+    width: 100%;
+  }
+  .menu-bevande {
+    width: 100%;
+    height: auto;
+  }
+  .bevande-img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    border: 3px solid var(--color-text-dark);
+    border-bottom: 1.5px solid var(--color-text-dark);
+  }
+  .card-bevande {
+    background-color: var(--color-bg-light);
+    border: 3px solid var(--color-text-dark);
+    border-top: 1.5px solid var(--color-text-dark);
+    padding: 2rem;
+    height: 180px;
+  }
+  .menu-bevande-last {
+    width: 100%;
+    display: block;
+  }
+  .card-bevande-last {
+    width: 100%;
+    border: 3px solid var(--color-text-dark);
+    border-top: 1.5px solid var(--color-text-dark);
+  }
+    /* FORM  */
+  .cbc-form {
+    gap: 1.5rem;
+  }
+  .form-button {
+    width: 100%;
+  }
+  .form-section {
+    padding: 3rem 1rem;
+  }
+  .form-section {
+    padding-bottom: 5rem;
+  }
+  .cbc-form {
+    max-width: 100%;
+  }
+  .form-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  .form-group label {
+    padding: 0.5rem 0.5rem;
+    width: 100%;
+    height: auto;
+  }
+  .cbc-form input,
+  .cbc-form textarea {
+    font-weight: bold;
+    padding: 1rem;
+    padding-top: 1.4rem;
+    font-size: 1rem;
+    border: 3px solid var(--color-text-dark);
+    background: transparent;
+    transition: all 0.3s ease;
+    outline: none;
+    resize: none;
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  /* FLOATING LABEL EFFECT */
+  .cbc-form input:focus + label,
+  .cbc-form input:not(:placeholder-shown) + label,
+  .cbc-form textarea:focus + label,
+  .cbc-form textarea:not(:placeholder-shown) + label {
+    top: -50%;
+    left: 0%;
+  }
 }
